@@ -1,0 +1,1 @@
+let createCounter=(n)=>()=>n++
