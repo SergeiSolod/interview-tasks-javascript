@@ -1,1 +1,1 @@
-var createHelloWorld = () => () => "Hello World"
+var createHelloWorld=()=>()=>"Hello World"
