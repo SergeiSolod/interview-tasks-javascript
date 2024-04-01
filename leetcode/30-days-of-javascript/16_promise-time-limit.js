@@ -3,15 +3,13 @@ const timeLimit = (fn, t) => {
         let thePromise = (
             new Promise(
                 (doRes, doRej) => {
-                    let theTimer = (
                         setTimeout(
-                            () => doRej("Time Limit Exceede"), t
+                            () => doRej("Time Limit Exceeded"), t
                         )
-                    );
 
                     fn(...args).then(
                         (theRes) => {
-                            clearTimeout(theTimer), doRes(theRes)
+                           doRes(theRes)
                         }
                     ).catch(doRej);
                 }
